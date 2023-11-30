@@ -2,20 +2,11 @@
 <html>
 
 	<head>
-		<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
-			rel="stylesheet">
-		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
 	</head>
 
 	<body>
-		<button class="mdc-button foo-button">
-			<div class="mdc-button__ripple"></div>
-			<span class="mdc-button__label">Button</span>
-		</button>
-    <script>
-      mdc.ripple.MDCRipple.attachTo(document.querySelector<HTMLElement>('.foo-button'));
-    </script>
+		<fluent-button>Hello world</fluent-button>
 	</body>
 
 </html>
