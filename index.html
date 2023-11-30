@@ -2,35 +2,20 @@
 <html>
 
 	<head>
-		<link rel="stylesheet" href="style.css">
-
-		<!-- Required styles for Material Web -->
-		<link rel="stylesheet"
-			href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-
-		<!-- Render textfield component -->
-		<label class="mdc-text-field mdc-text-field--filled">
-			<span class="mdc-text-field__ripple"></span>
-			<span class="mdc-floating-label" id="my-label">Label</span>
-			<input type="text" class="mdc-text-field__input" aria-labelledby="my-label">
-			<span class="mdc-line-ripple"></span>
-		</label>
-
-		<!-- Required Material Web JavaScript library -->
+		<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+			rel="stylesheet">
 		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-		<!-- Instantiate single textfield component rendered in the document -->
-		<script>
-			mdc.textField.MDCTextField.attachTo(document.querySelector < HTMLElement > ('.mdc-text-field'));
-		</script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</head>
 
 	<body>
-		<label class="mdc-text-field mdc-text-field--filled">
-			<span class="mdc-text-field__ripple"></span>
-			<input type="text" class="mdc-text-field__input" aria-labelledby="my-label">
-			<span class="mdc-floating-label" id="my-label">Label</span>
-			<span class="mdc-line-ripple"></span>
-		</label>
+		<button class="mdc-button foo-button">
+			<div class="mdc-button__ripple"></div>
+			<span class="mdc-button__label">Button</span>
+		</button>
+    <script>
+      mdc.ripple.MDCRipple.attachTo(document.querySelector<HTMLElement>('.foo-button'));
+    </script>
 	</body>
 
 </html>
