@@ -1,0 +1,14 @@
+.list-header {
+	border-color: rgb(var(--mdb-primary-rgb));
+	background: linear-gradient(90deg, rgb(var(--mdb-primary-rgb)), transparent);
+}
+
+.mt-fixed-header {
+	margin-top: 88px;
+}
+
+.card-img-scale {
+	height: auto;
+	width: 50%;
+	object-fit: scale-down;
+}
