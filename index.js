@@ -1,11 +1,12 @@
 class Project {
-	constructor(title, fw, progLang, pltf, image, repo, download) {
+	constructor(title, fw, progLang, pltf, image, repo, demo, download) {
 		this.title = title;
 		this.fw = fw;
 		this.progLang = progLang;
 		this.pltf = pltf;
 		this.image = image;
 		this.repo = repo;
+		this.demo = demo;
 		this.download = download;
 	}
 }
@@ -17,7 +18,8 @@ var projects = [
 		"Kotlin",
 		"Android",
 		"assets/gong_yun.png",
-		"https://github.com/founchoo/GongYun-for-Android",
+		"https://github.com/zhefangbyte/GongYun-for-Android",
+		null,
 		"https://play.google.com/store/apps/details?id=com.dart.campushelper"
 	),
 	new Project(
@@ -26,6 +28,7 @@ var projects = [
 		"C#",
 		"Windows",
 		"assets/sp.png",
+		null,
 		null,
 		"https://www.microsoft.com/store/productId/9N6R8ZJJQS5S"
 	),
@@ -36,6 +39,7 @@ var projects = [
 		"Web",
 		"assets/hms.png",
 		null,
+		null,
 		null
 	),
 	new Project(
@@ -44,7 +48,8 @@ var projects = [
 		"Java",
 		"Web",
 		"assets/crp.png",
-		"https://github.com/founchoo/CarRentalPlatform.Frontend",
+		"https://github.com/zhefangbyte/CarRentalPlatform.Frontend",
+		null,
 		null
 	),
 	new Project(
@@ -53,7 +58,8 @@ var projects = [
 		"Java",
 		"Web",
 		"assets/sasc.png",
-		"https://github.com/founchoo/Study-Aboard-Service-Center",
+		"https://github.com/zhefangbyte/Study-Aboard-Service-Center",
+		"http://my-server:9842",
 		null
 	),
 	new Project(
@@ -62,7 +68,8 @@ var projects = [
 		"Java",
 		"Web",
 		null,
-		"https://github.com/founchoo/echo",
+		"https://github.com/zhefangbyte/echo",
+		null,
 		null
 	),
 	new Project(
@@ -71,7 +78,8 @@ var projects = [
 		"Dart",
 		"All",
 		null,
-		"https://github.com/founchoo/sentiment_analysis",
+		"https://github.com/zhefangbyte/sentiment_analysis",
+		null,
 		null
 	),
 	new Project(
@@ -81,6 +89,7 @@ var projects = [
 		"Windows",
 		"assets/or.ico",
 		null,
+		null,
 		null
 	),
 	new Project(
@@ -89,6 +98,7 @@ var projects = [
 		"Python",
 		"Windows",
 		"assets/mr.png",
+		null,
 		null,
 		null
 	),
@@ -111,9 +121,11 @@ function getResolvedTemplate(project) {
 							</p>
 							<div class="col">
 								${project.repo == null ? "" : `<a href="${project.repo}" target="_blank"
-								class="btn btn-secondary">Go to repository</a>`}
+								class="btn btn-primary">Go to repository</a>`}
+								${project.demo == null ? "" : `<a href="${project.demo}" target="_blank"
+								class="btn btn-secondary">Try Demo</a>`}
 								${project.download == null ? "" : `<a href="${project.download}"
-								target="_blank" class="btn btn-light">Download from
+								target="_blank" class="btn btn-secondary">Download from
 								${project.download.startsWith("https://play.google.com") ? `Play Store` : (project.download.startsWith("https://www.microsoft.com") ? `Microsoft Store` : `Here`)}</a>`}
 							</div>
 						</div>
