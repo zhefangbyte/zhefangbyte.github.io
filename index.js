@@ -59,7 +59,7 @@ var projects = [
 		"Web",
 		"assets/sasc.png",
 		"https://github.com/zhefangbyte/Study-Aboard-Service-Center",
-		"http://my-server:9842",
+		null,
 		null
 	),
 	new Project(
@@ -88,7 +88,7 @@ var projects = [
 		"C#",
 		"Windows",
 		"assets/or.ico",
-		null,
+		"https://github.com/zhefangbyte/OilLevelDetectionSystem",
 		null,
 		null
 	),
@@ -98,7 +98,7 @@ var projects = [
 		"Python",
 		"Windows",
 		"assets/mr.png",
-		null,
+		"https://github.com/zhefangbyte/MagicRemover",
 		null,
 		null
 	),
