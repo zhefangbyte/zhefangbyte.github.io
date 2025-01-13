@@ -1,13 +1,15 @@
+var ghUsrName = 'jayllfilebyte';
+
 class Project {
-	constructor(title, fw, progLang, pltf, image, repo, demo, download) {
+	constructor(title, fw, progLang, pltf, imgPath, repoName, demoUrl, dlUrl) {
 		this.title = title;
 		this.fw = fw;
 		this.progLang = progLang;
 		this.pltf = pltf;
-		this.image = image;
-		this.repo = repo;
-		this.demo = demo;
-		this.download = download;
+		this.imgPath = imgPath;
+		this.repoName = repoName;
+		this.demoUrl = demoUrl;
+		this.dlUrl = dlUrl;
 	}
 }
 
@@ -17,8 +19,8 @@ var projects = [
 		"Jetpack Compose",
 		"Kotlin",
 		"Android",
-		"assets/gong_yun.png",
-		"https://github.com/zhefangbyte/GongYun-for-Android",
+		"assets/gy.png",
+		"GongYun-for-Android",
 		null,
 		"https://play.google.com/store/apps/details?id=com.dart.campushelper"
 	),
@@ -48,7 +50,7 @@ var projects = [
 		"Java",
 		"Web",
 		"assets/crp.png",
-		"https://github.com/zhefangbyte/CarRentalPlatform.Frontend",
+		"CarRentalPlatform.Frontend",
 		null,
 		null
 	),
@@ -58,7 +60,7 @@ var projects = [
 		"Java",
 		"Web",
 		"assets/sasc.png",
-		"https://github.com/zhefangbyte/Study-Aboard-Service-Center",
+		"Study-Aboard-Service-Center",
 		null,
 		null
 	),
@@ -67,8 +69,8 @@ var projects = [
 		"SpringBoot",
 		"Java",
 		"Web",
-		null,
-		"https://github.com/zhefangbyte/echo",
+		"assets/echo.png",
+		"echo",
 		null,
 		null
 	),
@@ -78,7 +80,7 @@ var projects = [
 		"Dart",
 		"All",
 		null,
-		"https://github.com/zhefangbyte/sentiment_analysis",
+		"sentiment_analysis",
 		null,
 		null
 	),
@@ -88,7 +90,7 @@ var projects = [
 		"C#",
 		"Windows",
 		"assets/or.ico",
-		"https://github.com/zhefangbyte/OilLevelDetectionSystem",
+		"OilLevelDetectionSystem",
 		null,
 		null
 	),
@@ -98,7 +100,7 @@ var projects = [
 		"Python",
 		"Windows",
 		"assets/mr.png",
-		"https://github.com/zhefangbyte/MagicRemover",
+		"MagicRemover",
 		null,
 		null
 	),
@@ -109,7 +111,7 @@ function getResolvedTemplate(project) {
 		`<div class="col-md-auto">
 			<div class="card my-3">
 				<div class="row g-0">
-					${project.image == null ? "" : `<div class="col-md-2 d-flex align-items-center justify-content-center"><img src="${project.image}" alt="..." class="img-fluid rounded-7 card-img-scale" />
+					${project.imgPath == null ? "" : `<div class="col-md-2 d-flex align-items-center justify-content-center"><img src="${project.imgPath}" alt="..." class="img-fluid rounded-7 card-img-scale" />
 					</div>`}
 					<div class="col-md-10">
 						<div class="card-body">
@@ -120,13 +122,13 @@ function getResolvedTemplate(project) {
 								<span class="badge badge-primary">${project.pltf}</span>
 							</p>
 							<div class="col">
-								${project.repo == null ? "" : `<a href="${project.repo}" target="_blank"
+								${project.repoName == null ? "" : `<a href="https://github.com/${ghUsrName}/${project.repoName}" target="_blank"
 								class="btn btn-primary">Go to repository</a>`}
-								${project.demo == null ? "" : `<a href="${project.demo}" target="_blank"
+								${project.demoUrl == null ? "" : `<a href="${project.demoUrl}" target="_blank"
 								class="btn btn-secondary">Try Demo</a>`}
-								${project.download == null ? "" : `<a href="${project.download}"
+								${project.dlUrl == null ? "" : `<a href="${project.dlUrl}"
 								target="_blank" class="btn btn-secondary">Download from
-								${project.download.startsWith("https://play.google.com") ? `Play Store` : (project.download.startsWith("https://www.microsoft.com") ? `Microsoft Store` : `Here`)}</a>`}
+								${project.dlUrl.startsWith("https://play.google.com") ? `Play Store` : (project.dlUrl.startsWith("https://www.microsoft.com") ? `Microsoft Store` : `Here`)}</a>`}
 							</div>
 						</div>
 					</div>
